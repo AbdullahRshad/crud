@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+<section>
+    <div class="container">
+    <div class="pt-5">
+        <div class="form-floating mb-3">
+            <input oninput="validateInputs(this)" type="text" class="form-control" id="productName" placeholder="productName">
+            <div class="alert d-none alert-danger py-1 my-3">
+              <small>Lorem ipsum dolor sit amet.</small>
+            </div>
+            <label for="productName">Product name:</label>
+          </div>
+        <div class="form-floating mb-3">
+            <input oninput="validateInputs(this)" type="number" class="form-control" id="productPrice" placeholder="productPrice">
+            <div class="alert d-none  alert-danger py-1 my-3">
+              <small>Lorem ipsum dolor sit amet.</small>
+            </div>
+            <label for="productPrice">Product price:</label>
+          </div>
+        <div class="form-floating mb-3">
+            <input type="text" oninput="validateInputs(this)" class="form-control" id="productCategory" placeholder="productCategory" list="Category">
+            <div class="alert d-none  alert-danger py-1 my-3">
+              <small>Lorem ipsum dolor sit amet.</small>
+            </div>
+            <label for="productCategory">Product category:</label>
+          </div>
+          <datalist id="Category">
+            <option value="tv" >
+            <option value="phone" >
+            <option value="laptop" >
+            <option value="watches">
+            <option value="electronics">
+          </datalist>
+
+          <div class="form-floating mb-3">
+            <input type="text" oninput="validateInputs(this)" class="form-control" id="productDsc" placeholder="productDsc">
+            <div class="aler d-none t alert-danger py-1 my-3">
+              <small>Lorem ipsum dolor sit amet.</small>
+            </div>
+            <label for="productDsc">Product DSC:</label>
+          </div>
+        <div class="form-floating mb-3">
+            <input type="file" class="form-control" id="productImage" placeholder="productImage">
+            <label for="productImage">Product Image:</label>
+          </div>
+    </div>
+    <div class="btns">
+        <button class="btn bg-info" id="addBtn" onclick="addProduct()">add product</button>
+        <button class="btn bg-success d-none" id="updateBTN" onclick="updateProduct()">update Product </button>
+    </div>
+</div>
+</section>
+<section class="py-5">
+    <div class="container">
+      <input type="text" id="productSearch" placeholder="Product Search"oninput="productSearch(this.value)" class="form-control">
+      <label for="productSearch"></label>
+        <div class="row gy-3 product" id="ProductsRow">
+        </div>
+    </div>
+</section>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
